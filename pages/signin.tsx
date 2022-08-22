@@ -131,10 +131,10 @@ const SignIn = () => {
               </form>
             )}
 
-            <span className="pt-1 text-center text-sm">
+            <span className="pt-1 text-sm text-center">
               <a
                 href="#"
-                className="text-zinc-200 text-accent-9 hover:underline cursor-pointer"
+                className="cursor-pointer text-zinc-200 text-accent-9 hover:underline"
                 onClick={() => {
                   if (showPasswordInput) setPassword('');
                   setShowPasswordInput(!showPasswordInput);
@@ -147,11 +147,11 @@ const SignIn = () => {
               </a>
             </span>
 
-            <span className="pt-1 text-center text-sm">
+            <span className="pt-1 text-sm text-center">
               <span className="text-zinc-200">Don't have an account?</span>
               {` `}
               <Link href="/signup">
-                <a className="text-accent-9 font-bold hover:underline cursor-pointer">
+                <a className="font-bold cursor-pointer text-accent-9 hover:underline">
                   Sign up.
                 </a>
               </Link>
@@ -160,12 +160,12 @@ const SignIn = () => {
 
           <div className="flex items-center my-6">
             <div
-              className="border-t border-zinc-600 flex-grow mr-3"
+              className="flex-grow mr-3 border-t border-zinc-600"
               aria-hidden="true"
             ></div>
             <div className="text-zinc-400">Or</div>
             <div
-              className="border-t border-zinc-600 flex-grow ml-3"
+              className="flex-grow ml-3 border-t border-zinc-600"
               aria-hidden="true"
             ></div>
           </div>
@@ -174,10 +174,11 @@ const SignIn = () => {
             variant="slim"
             type="submit"
             disabled={loading}
-            onClick={() => handleOAuthSignIn('github')}
+            // onClick={() => handleOAuthSignIn('github')}
+            onClick={() => handleOAuthSignIn('discord')}
           >
-            <GitHub />
-            <span className="ml-2">Continue with GitHub</span>
+            {/* <GitHub /> */}
+            <span className="ml-2">Continue with Discord</span>
           </Button>
         </div>
       </div>
